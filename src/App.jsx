@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Home from './views/Home'
 import Films from './views/Films'
 import Characters from './views/Characters'
+import FilmDetails from './views/FilmDetails'
+import CharacterDetails from './views/CharacterDetails'
 
 const App = () => {
     return(
@@ -16,8 +18,14 @@ const App = () => {
                     <Route exact path="/Films/">
                         <Films />
                     </Route>
+                    <Route exact path="/Films/:Filmsid">
+                        <FilmDetails />
+                    </Route>
                     <Route exact path="/Characters/">
                         <Characters />
+                    </Route>
+                    <Route exact path="/Characters/:Charactersid">
+                        <CharacterDetails />
                     </Route>
                 </Switch>
         </BrowserRouter>

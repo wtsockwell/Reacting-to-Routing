@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 
 const Characters = () => {
 
@@ -22,8 +23,7 @@ const Characters = () => {
                                     <h3 className="card-title">{`${person.name}`}</h3>
                                     <p className="card-text">{`${person.age}`}</p>
                                     <p className="card-text">{`${person.gender}`}</p>
-                                    <p className="card-text d-inline">{`The film this person was in was `}</p>
-                                    <a href={`${person.films[0]}`} className="d-inline">this</a>
+                                    <Link to= {`/Characters/${person.id}`} className="btn btn-dark">For a more indepth look</Link>
                                 </div>
                             </div>
                         </div>
